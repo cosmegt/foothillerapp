@@ -1,4 +1,7 @@
-##FoothillerApp##
+#FoothillerApp
 
-#Once Copied
-To start do expo start
+##Once Copied
+-Run npm install
+-To start do expo start (needs sudo)
+
+
