@@ -6,7 +6,7 @@ import { createStackNavigator } from 'react-navigation';
 export default class GradesScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#92BBD9'}}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text style={styles.text}>Grades</Text>
       </View>
     );

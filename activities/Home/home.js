@@ -6,7 +6,7 @@ import { createStackNavigator } from 'react-navigation';
 export default class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#97CAE5'}}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text style={styles.text}>Home</Text>
       </View>
     );

@@ -12,22 +12,17 @@ export default class App extends React.Component {
   render() {
     return (
       <Swiper style={styles.wrapper} showsButtons={false} showsPagination={false} index={1}>
-        
-        <View>
+        <View style={styles.slide1}>
         {/*activities/grades*/}
           <GradesScreen/>
         </View>
-        
-        <View>
+        <View style={styles.slide2}>
         {/*activities/home*/}
-        
           <HomeScreen/>
         </View>
-        
-        <View>
+        <View style={styles.slide3}>
         {/*activities/calendar*/}
-        
-          <CalendarScreen/>
+          <CalendarScreen/>  
         </View>
       </Swiper>
     );
@@ -36,5 +31,23 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   wrapper: {
-  }
+  },
+  slide1: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#9DD6EB',
+  },
+  slide2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#97CAE5',
+  },
+  slide3: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#92BBD9',
+  },
 })

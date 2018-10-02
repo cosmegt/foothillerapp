@@ -6,7 +6,7 @@ import { createStackNavigator } from 'react-navigation';
 export default class CalendarScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#9DD6EB'}}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text style={styles.text}>Calendar</Text>
       </View>
     );
@@ -15,9 +15,9 @@ export default class CalendarScreen extends React.Component {
 
 
 const styles = {
-  text: {
-    color: '#fff',
-    fontSize: 30,
-    fontWeight: 'bold',
-  }
+    text: {
+        color: '#fff',
+        fontSize: 30,
+        fontWeight: 'bold',
+    }
 }
