@@ -21,14 +21,10 @@ const RootStack = createStackNavigator(
 
 export default class App extends React.Component {
   render() {
-<<<<<<< HEAD
     return (
       <View style={styles.container}>
         <Text>Foothillerapp</Text>
       </View>
     );
-=======
-    return <RootStack />;
->>>>>>> 6bc52bdb6a051e9f0d5fe0cef63ce1cb623a3814
   }
 }
