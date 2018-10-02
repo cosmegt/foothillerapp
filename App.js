@@ -11,23 +11,43 @@ import CalendarScreen from './activities/Calendar/calendar'
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.wrapper}>
-        <Text style={styles.text}>Hello World</Text>
-
-      </View>  
+      <Swiper style={styles.wrapper} showsButtons={false} showsPagination={false} index={1}>
+        <View style={styles.slide1}>
+        {/*activities/grades*/}
+          <GradesScreen/>
+        </View>
+        <View style={styles.slide2}>
+        {/*activities/home*/}
+          <HomeScreen/>
+        </View>
+        <View style={styles.slide3}>
+        {/*activities/calendar*/}
+          <CalendarScreen/>  
+        </View>
+      </Swiper>
     );
   }
 }
 
 const styles = StyleSheet.create({
   wrapper: {
+  },
+  slide1: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#9DD6EB',
   },
-  text: {
-    color: '#000',
-    fontSize: 30,
-    fontWeight: 'bold',
-  }
+  slide2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#97CAE5',
+  },
+  slide3: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#92BBD9',
+  },
 })
