@@ -9,47 +9,16 @@ import Swiper from 'react-native-swiper';
 //import GradesScreen from './activities/Grades/grades';
 //import CalendarScreen from './activities/Calendar/calendar';
 
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
-      </View>
-    );
-  }
-}
-
-class DetailsScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Details Screen</Text>
-      </View>
-    );
-  }
-}
-
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.wrapper}>
-        <RootStack></RootStack>
+        <Text style={styles.text}>This aint it chief</Text>
 
       </View>  
     );
   }
 }
-
-const RootStack = createStackNavigator(
-  {
-    Home: HomeScreen,
-    Details: DetailsScreen,
-  },
-  {
-    initialRouteName: 'Home',
-  }
-);
-
 
 const styles = StyleSheet.create({
   wrapper: {
