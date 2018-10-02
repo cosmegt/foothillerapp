@@ -7,7 +7,6 @@
 
 ## Installed Dependencies
 - NPM
-    - React Native Base
-    - React Native Swipable
+    - React Native Swipable -> `Remove fontFamily: 'Arial'`
     - React Native Navigation 2.0
 Run `NPM install` if error shows up
