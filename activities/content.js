@@ -17,15 +17,21 @@ import Swiper from 'react-native-swiper';
 export default class Content extends React.Component {
   render() {
     return (
-      <Swiper style={styles.wrapper} showsButtons={false} showsPagination={false}>
+      <Swiper containerStyle={styles.wrapper} showsButtons={false} showsPagination={false}>
         <View style={styles.slide1}>
-          <Text style={styles.text}>Home</Text>
+          <Text style={styles.text}>Hello World</Text>
         </View>
         <View style={styles.slide2}>
           <Text style={styles.text}>Grades</Text>
         </View>
         <View style={styles.slide3}>
           <Text style={styles.text}>Schedule</Text>
+        </View>
+        <View style={styles.slide4}>
+          <Text style={styles.text}>Calendar</Text>
+        </View>
+        <View style={styles.slide5}>
+          <Text style={styles.text}>Planner</Text>
         </View>
       </Swiper>  
     );
@@ -56,6 +62,18 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#92BBD9',
+    },
+    slide4: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#8eb9d7',
+    },
+    slide5: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#7badd1',
     },
     text: {
         color: '#fff',
