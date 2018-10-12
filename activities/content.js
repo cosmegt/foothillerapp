@@ -19,7 +19,7 @@ export default class Content extends React.Component {
     return (
       <Swiper containerStyle={styles.wrapper} showsButtons={false} showsPagination={false}>
         <View style={styles.slide1}>
-          <Text style={styles.text}>Hello World</Text>
+          <Text style={styles.text}>Home</Text>
         </View>
         <View style={styles.slide2}>
           <Text style={styles.text}>Grades</Text>
@@ -67,13 +67,13 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#8eb9d7',
+      backgroundColor: '#7badd1',
     },
     slide5: {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#7badd1',
+      backgroundColor: '#68a1ca',
     },
     text: {
         color: '#fff',
