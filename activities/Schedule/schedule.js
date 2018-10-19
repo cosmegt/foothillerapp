@@ -4,31 +4,24 @@ import { createStackNavigator } from 'react-navigation';
 
 
 
-export default class CalendarScreen extends React.Component {
+
+export default class ScheduleScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text style={styles.text}>Calendar</Text>
-        <DoubleButton/>
+        <Text style={styles.text}>Schedule</Text>
+        
+        
       </View>
     );
   }
 }
 
 
-
-
-
-
-
-
-
-
 const styles = {
-    text: {
-        color: '#fff',
-        fontSize: 30,
-        fontWeight: 'bold',
-    }
+  text: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold',
+  }
 }
-

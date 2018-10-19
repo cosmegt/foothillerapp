@@ -7,7 +7,14 @@ import {
   View
 } from 'react-native';
 import Content from './activities/content'
+/*
 
+
+
+Do Not Touch This File
+
+
+*/
 
 
 export default class App extends React.Component {

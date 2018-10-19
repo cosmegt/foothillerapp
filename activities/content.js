@@ -10,22 +10,23 @@ import {
 import Swiper from 'react-native-swiper';
 
 //Project Activities
-//import HomeScreen from './activities/Home/home'
+import HomeScreen from './Home/home';
+import ScheduleScreen from './Schedule/schedule';
 //import GradesScreen from './activities/Grades/grades';
-//import CalendarScreen from './activities/Calendar/calendar';
+import CalendarScreen from './Calendar/calendar';
 
 export default class Content extends React.Component {
   render() {
     return (
       <Swiper containerStyle={styles.wrapper} showsButtons={false} showsPagination={false}>
         <View style={styles.slide1}>
-          <Text style={styles.text}>Home</Text>
+          <HomeScreen/>
         </View>
         <View style={styles.slide2}>
           <Text style={styles.text}>Grades</Text>
         </View>
         <View style={styles.slide3}>
-          <Text style={styles.text}>Schedule</Text>
+          <ScheduleScreen/>
         </View>
         <View style={styles.slide4}>
           <Text style={styles.text}>Calendar</Text>
