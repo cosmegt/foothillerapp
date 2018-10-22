@@ -10,12 +10,12 @@ export default class ScheduleScreen extends React.Component {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text style={styles.text}>Schedule</Text>
+        </View>
         
-        
-      </View>
     );
   }
 }
+
 
 
 const styles = {
