@@ -8,6 +8,7 @@ import {
   Dimensions
 } from 'react-native';
 import Swiper from 'react-native-swiper';
+import { LinearGradient } from 'expo';
 
 //Project Activities
 import HomeScreen from './Home/home';
@@ -19,19 +20,29 @@ export default class Content extends React.Component {
   render() {
     return (
       <Swiper containerStyle={styles.wrapper} showsButtons={false} showsPagination={false}>
-        <View style={styles.slide1}>
+        <View style={styles.slide}>
+        <LinearGradient
+          colors={['rgba(155, 178, 8,0.8)', 'transparent']}
+          style={{
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              top: 0,
+              height: 500,
+            }}
+          />
           <HomeScreen/>
         </View>
-        <View style={styles.slide2}>
+        <View style={styles.slide}>
           <Text style={styles.text}>Grades</Text>
         </View>
-        <View style={styles.slide3}>
+        <View style={styles.slide}>
           <ScheduleScreen/>
         </View>
-        <View style={styles.slide4}>
+        <View style={styles.slide}>
           <Text style={styles.text}>Calendar</Text>
         </View>
-        <View style={styles.slide5}>
+        <View style={styles.slide}>
           <Text style={styles.text}>Planner</Text>
         </View>
       </Swiper>  
@@ -46,35 +57,11 @@ const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
     },
-    slide1: {
+    slide: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#9DD6EB',
-    },
-    slide2: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#97CAE5',
-    },
-    slide3: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#92BBD9',
-    },
-    slide4: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#7badd1',
-    },
-    slide5: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#68a1ca',
+        backgroundColor: '#089eb2',
     },
     text: {
         color: '#fff',
