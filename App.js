@@ -4,7 +4,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  SafeAreaView,
 } from 'react-native';
 import Content from './activities/content'
 /*
@@ -20,9 +21,12 @@ Do Not Touch This File
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.default}>
+      <SafeAreaView style={styles.default}>
         <Content/>
-      </View>
+        <View style={styles.navBar}>
+          <Text>Home</Text>
+        </View>
+      </SafeAreaView>
     );
   }
 }
@@ -31,5 +35,12 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   default: {
     flex:1
+  },
+  navBar:{ 
+    position: 'absolute',
+    backgroundColor: 'white',
+    left: 0,
+    right: 0,
+    bottom: 0,
   }
 })

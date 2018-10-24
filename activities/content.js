@@ -28,16 +28,19 @@ export default class Content extends React.Component {
           <HomeScreen/>
         </View>
         <View style={styles.slide}>
-          <Gradient colorize="rgba(214, 37, 6,0.8)"/>
+          <Gradient colorize="rgba(198, 195, 1,0.8)"/>
           <Text style={styles.text}>Grades</Text>
         </View>
         <View style={styles.slide}>
+          <Gradient colorize="rgba(198, 195, 1,0.8)"/>
           <ScheduleScreen/>
         </View>
         <View style={styles.slide}>
+          <Gradient colorize="rgba(198, 195, 1,0.8)"/>
           <Text style={styles.text}>Calendar</Text>
         </View>
         <View style={styles.slide}>
+          <Gradient colorize="rgba(198, 195, 1,0.8)"/>
           <Text style={styles.text}>Planner</Text>
         </View>
       </Swiper>  
