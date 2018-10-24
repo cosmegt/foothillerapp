@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 import { LinearGradient } from 'expo';
+//Import Misc Assets
+import Gradient from '../assets/gradient'
 
 //Project Activities
 import HomeScreen from './Home/home';
@@ -16,21 +18,13 @@ import ScheduleScreen from './Schedule/schedule';
 //import GradesScreen from './activities/Grades/grades';
 import CalendarScreen from './Calendar/calendar';
 
+
 export default class Content extends React.Component {
   render() {
     return (
       <Swiper containerStyle={styles.wrapper} showsButtons={false} showsPagination={false}>
         <View style={styles.slide}>
-        <LinearGradient
-          colors={['rgba(155, 178, 8,0.8)', 'transparent']}
-          style={{
-              position: 'absolute',
-              left: 0,
-              right: 0,
-              top: 0,
-              height: 500,
-            }}
-          />
+          <Gradient colorize="rgba(158, 183, 0,0.8)"/>
           <HomeScreen/>
         </View>
         <View style={styles.slide}>
