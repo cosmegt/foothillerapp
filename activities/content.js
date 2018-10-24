@@ -24,10 +24,11 @@ export default class Content extends React.Component {
     return (
       <Swiper containerStyle={styles.wrapper} showsButtons={false} showsPagination={false}>
         <View style={styles.slide}>
-          <Gradient colorize="rgba(158, 183, 0,0.8)"/>
+          <Gradient colorize="rgba(198, 195, 1,0.8)"/>
           <HomeScreen/>
         </View>
         <View style={styles.slide}>
+          <Gradient colorize="rgba(214, 37, 6,0.8)"/>
           <Text style={styles.text}>Grades</Text>
         </View>
         <View style={styles.slide}>
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#089eb2',
+        backgroundColor: '#3fa2d3',
     },
     text: {
         color: '#fff',
