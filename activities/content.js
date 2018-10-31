@@ -1,14 +1,12 @@
 //React Imports
 import React from 'react';
 import {
-  AppRegistry,
   StyleSheet,
   Text,
   View,
   Dimensions
 } from 'react-native';
 import Swiper from 'react-native-swiper';
-import { LinearGradient } from 'expo';
 //Import Misc Assets
 import Gradient from '../assets/gradient'
 
@@ -24,23 +22,23 @@ export default class Content extends React.Component {
     return (
       <Swiper containerStyle={styles.wrapper} showsButtons={false} showsPagination={false}>
         <View style={styles.slide}>
-          <Gradient colorize="rgba(198, 195, 1,0.8)"/>
+          <Gradient colorize="rgba(198, 195, 1,0.5)"/>
           <HomeScreen/>
         </View>
         <View style={styles.slide}>
-          <Gradient colorize="rgba(198, 195, 1,0.8)"/>
+          <Gradient colorize="rgba(198, 195, 1,0.5)"/>
           <Text style={styles.text}>Grades</Text>
         </View>
         <View style={styles.slide}>
-          <Gradient colorize="rgba(198, 195, 1,0.8)"/>
+          <Gradient colorize="rgba(198, 195, 1,0.5)"/>
           <ScheduleScreen/>
         </View>
         <View style={styles.slide}>
-          <Gradient colorize="rgba(198, 195, 1,0.8)"/>
+          <Gradient colorize="rgba(198, 195, 1,0.5)"/>
           <Text style={styles.text}>Calendar</Text>
         </View>
         <View style={styles.slide}>
-          <Gradient colorize="rgba(198, 195, 1,0.8)"/>
+          <Gradient colorize="rgba(198, 195, 1,0.5)"/>
           <Text style={styles.text}>Planner</Text>
         </View>
       </Swiper>  
@@ -57,7 +55,7 @@ const styles = StyleSheet.create({
     },
     slide: {
         flex: 1,
-        justifyContent: 'center',
+        //justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#3fa2d3',
     },

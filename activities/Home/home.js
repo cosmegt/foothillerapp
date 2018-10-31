@@ -1,14 +1,23 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
+import Swiper from 'react-native-swiper';
 
 
 export default class HomeScreen extends React.Component {
   render() {
     return (
       <View>
-        <Text style={styles.text}>Home</Text>
+        <View>
+          <Text style={styles.text}>{"\n"}Cosme Chavez (327137)</Text>
+        </View>
+        <View style={styles.subContent}>
+          <Image 
+            source={require('./schedule.png')}
+            style={{width: 50, height: 50}}></Image>
+          <Text style={styles.todo}>Today is a Regular Day</Text>
 
+        </View>
       </View>
     );
   }
@@ -20,5 +29,14 @@ const styles = {
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold',
+  },
+  todo: {
+    color: '#FFF',
+    fontSize: 22,
+
+  },
+  subContent: {
+    justifyContent: 'center',
+    alignContent: 'center'
   }
 }

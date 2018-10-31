@@ -23,9 +23,6 @@ export default class App extends React.Component {
     return (
       <SafeAreaView style={styles.default}>
         <Content/>
-        <View style={styles.navBar}>
-          <Text>Home</Text>
-        </View>
       </SafeAreaView>
     );
   }
