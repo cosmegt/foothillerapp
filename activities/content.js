@@ -13,7 +13,7 @@ import Gradient from '../assets/gradient'
 //Project Activities
 import HomeScreen from './Home/home';
 import ScheduleScreen from './Schedule/schedule';
-//import GradesScreen from './activities/Grades/grades';
+import GradesScreen from './Grades/grades';
 import CalendarScreen from './Calendar/calendar';
 
 
@@ -27,7 +27,7 @@ export default class Content extends React.Component {
         </View>
         <View style={styles.slide}>
           <Gradient colorize="rgba(198, 195, 1,0.5)"/>
-          <Text style={styles.text}>Grades</Text>
+          <GradesScreen/>
         </View>
         <View style={styles.slide}>
           <Gradient colorize="rgba(198, 195, 1,0.5)"/>

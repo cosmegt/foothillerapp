@@ -11,17 +11,13 @@ export default class HomeScreen extends React.Component {
         <View>
           <Text style={styles.text}>{"\n"}Cosme Chavez (327137)</Text>
         </View>
-        <Swiper showsButtons={false} showsPagination={false}>
-          <View style={styles.subContent}>
-            <Image 
-              source={require('./schedule.png')}
-              style={{width: 50, height: 50, justifyContent: 'center', alignContent: 'center'}}></Image>
-              <Text style={styles.todo}>Today is a Regular Day</Text>
-          </View>
-          <View style={styles.subContent}>
-            
-          </View>
-        </Swiper>
+        <View style={styles.subContent}>
+          <Image 
+            source={require('./schedule.png')}
+            style={{width: 50, height: 50}}></Image>
+          <Text style={styles.todo}>Today is a Regular Day</Text>
+
+        </View>
       </View>
     );
   }
@@ -39,8 +35,5 @@ const styles = {
     fontSize: 22,
 
   },
-  subContent: {
-    justifyContent: 'center',
-    alignContent: 'center'
-  }
+  sy
 }
