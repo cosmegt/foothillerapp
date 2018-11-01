@@ -10,14 +10,6 @@ export default class GradesScreen extends React.Component {
         <View>
           <Text style={styles.Title}>{"\n"}Grades</Text>
         </View>
-        <Swiper showsButtons={false} showsPagination={false}>
-          <View style={styles.subContent}>
-
-          </View>
-          <View style={styles.subContent}>
-            
-          </View>
-        </Swiper>
       </View>
     );
   }

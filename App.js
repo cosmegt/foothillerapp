@@ -33,6 +33,13 @@ const styles = StyleSheet.create({
   default: {
     flex:1
   },
+  Title: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold',
+    borderBottomWidth: 3,
+    borderBottomColor: '#FFF',
+  },
   navBar:{ 
     position: 'absolute',
     backgroundColor: 'white',

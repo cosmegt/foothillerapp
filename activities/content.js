@@ -15,6 +15,7 @@ import HomeScreen from './Home/home';
 import ScheduleScreen from './Schedule/schedule';
 import GradesScreen from './Grades/grades';
 import CalendarScreen from './Calendar/calendar';
+import PlannerScreen from './Planner/planner'
 
 
 export default class Content extends React.Component {
@@ -35,11 +36,11 @@ export default class Content extends React.Component {
         </View>
         <View style={styles.slide}>
           <Gradient colorize="rgba(198, 195, 1,0.5)"/>
-          <Text style={styles.text}>Calendar</Text>
+          <CalendarScreen/>
         </View>
         <View style={styles.slide}>
           <Gradient colorize="rgba(198, 195, 1,0.5)"/>
-          <Text style={styles.text}>Planner</Text>
+          <PlannerScreen/>
         </View>
       </Swiper>  
     );
