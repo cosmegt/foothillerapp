@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "foothillerapp",
-    "description": "For Foothillers By Foothillers",
-    "slug": "foothillerapp",
+    "name": "SAPP",
+    "description": "For Students By Students",
+    "slug": "sapp",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": [
