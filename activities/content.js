@@ -23,7 +23,7 @@ export default class Content extends React.Component {
     return (
       <Swiper containerStyle={styles.wrapper} showsButtons={false} showsPagination={false}>
         <View style={styles.slide}>
-          <Gradient colorize="rgba(198, 195, 1,0.5)"/>
+          <Gradient colorize="rgba(0, 0, 0,0.5)"/>
           <HomeScreen/>
         </View>
         <View style={styles.slide}>
