@@ -23,7 +23,5 @@ const styles = {
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold',
-    borderBottomWidth: 3,
-    borderBottomColor: '#FFF',
   },
 }
