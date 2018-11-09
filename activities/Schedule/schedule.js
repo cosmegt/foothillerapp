@@ -8,8 +8,14 @@ import { createStackNavigator } from 'react-navigation';
 export default class ScheduleScreen extends React.Component {
   render() {
     return (
-      <View>
-        <Text style={styles.Title}>{"\n"}Schedule</Text>
+      <View style={{
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+      }}>
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
       </View>
         
     );
