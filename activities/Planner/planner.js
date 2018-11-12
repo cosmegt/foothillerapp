@@ -8,7 +8,7 @@ export default class PlannerScreen extends React.Component {
   render() {
     return (
       <View>
-        <Text style={styles.Title}>{"\n"}Planner</Text>
+        <Text style={styles.Title}>{"\n"}Plan</Text>
       </View>
     );
   }
