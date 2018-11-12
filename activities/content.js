@@ -27,6 +27,7 @@ export default class Content extends React.Component {
           <HomeScreen/>
         </View>
         <View style={styles.slide}>
+<<<<<<< HEAD
           {/* <Gradient colorize="rgba(225, 225, 225,0.5)"/> */}
           <GradesScreen/>
         </View>
@@ -40,6 +41,21 @@ export default class Content extends React.Component {
         </View>
         <View style={styles.slide}>
           {/* <Gradient colorize="rgba(225, 225, 225,0.5)"/> */}
+=======
+          <Gradient colorize="rgba(0, 0, 0,0.5)"/>
+          <GradesScreen/>
+        </View>
+        <View style={styles.slide}>
+          <Gradient colorize="rgba(0, 0, 0,0.5)"/>
+          <ScheduleScreen/>
+        </View>
+        <View style={styles.slide}>
+          <Gradient colorize="rgba(0, 0, 0,0.5)"/>
+          <CalendarScreen/>
+        </View>
+        <View style={styles.slide}>
+          <Gradient colorize="rgba(0, 0, 0,0.5)"/>
+>>>>>>> 9f751f77684c19d9d800a25eb18fb33bdab6a0ec
           <PlannerScreen/>
         </View>
       </Swiper>  
