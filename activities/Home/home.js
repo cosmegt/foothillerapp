@@ -14,12 +14,16 @@ export default class HomeScreen extends React.Component {
         </View>
         <Swiper style={styles.subContent} showsPagination={false}>
           <View style={styles.subContent}>
-            
+          <Image 
+              source={require('./schedule.png')}
+              style={{
+                width: 50,
+                height: 50,
+                }}>
+            </Image>
             <Text style={styles.text}>Today is a Regular Day</Text>
           </View>
-          <View style={styles.subContent}>
-            <Text style={styles.text}>Your Next Class {"\n"}Math</Text>    
-          </View>
+          
         </Swiper>
       </View>
     );
