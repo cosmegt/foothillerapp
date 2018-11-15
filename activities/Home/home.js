@@ -42,7 +42,7 @@ const styles = {
   text: {
     color: '#FFF',
     fontSize: 22,
-
+    alignItems: 'center',
   },
   subContent:{
     flex: .5,
