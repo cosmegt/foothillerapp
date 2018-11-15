@@ -10,7 +10,7 @@ export default class HomeScreen extends React.Component {
     return (
       <View>
         <View>
-          <Text style={styles.Title}>{"\n"}Cosme Chavez (327137)</Text>
+          <Text style={styles.Title}>{"\n"}Parker George (326237)</Text>
         </View>
         <Swiper style={styles.subContent} showsPagination={false}>
           <View style={styles.subContent}>
