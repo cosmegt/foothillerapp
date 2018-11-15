@@ -50,7 +50,7 @@ const styles = {
     flex: .5,
     alignItems: 'center',
     justifyContent: 'center',
-    // borderWidth: 3,
+    borderWidth: 3,
     // borderColor: '#FFF',
   }
 }
