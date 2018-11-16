@@ -1,15 +1,13 @@
 import React from 'react';
-import { View, Text, Image, } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
-
 
 
 export default class HomeScreen extends React.Component {
   render() {
     // some comment
     return (
-      
       <View>
         <View>
           <Text style={styles.Title}>{"\n"}Cosme Chavez (327137)</Text>
@@ -30,13 +28,12 @@ export default class HomeScreen extends React.Component {
           </View>
         </Swiper>
       </View>
-      
     );
   }
 }
 
 
-const styles = StyleSheet.create({
+const styles = {
   Title: {
     color: '#fff',
     fontSize: 30,
@@ -55,5 +52,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     // borderWidth: 3,
     // borderColor: '#FFF',
-  },
-});
+  }
+}
