@@ -6,10 +6,6 @@ import Swiper from 'react-native-swiper';
 
 
 export default class HomeScreen extends React.Component {
-  
-  
-  
-  
   render() {
     // some comment
     return (
