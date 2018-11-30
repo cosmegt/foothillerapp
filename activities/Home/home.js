@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 
 
 export default class HomeScreen extends React.Component {
@@ -9,6 +10,7 @@ export default class HomeScreen extends React.Component {
     // some comment
     return (
       <View>
+        
         <View>
           <Text style={styles.Title}>{"\n"}Cosme Chavez (327137)</Text>
         </View>
