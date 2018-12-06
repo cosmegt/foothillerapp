@@ -82,3 +82,4 @@ GoogleSignin.configure({
   } catch (err) {
     console.error('play services are not available');
   }
+  
