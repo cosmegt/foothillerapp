@@ -7,7 +7,8 @@ import {
   View,
   SafeAreaView,
 } from 'react-native';
-import Content from './activities/content'
+import Content from './activities/content';
+import loginScreen from './activities/login/login';
 /*
 
 
