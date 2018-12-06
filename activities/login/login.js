@@ -77,7 +77,7 @@ GoogleSignin.configure({
     }
   };
   try {
-    await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+    GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
     // google services are available
   } catch (err) {
     console.error('play services are not available');
