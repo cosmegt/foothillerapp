@@ -5,7 +5,17 @@ import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-goog
 
 
 export default class loginScreen extends React.Component{
-  GoogleSignin.configure({
+    render() {
+        <GoogleSigninButton
+          style={{ width: 48, height: 48 }}
+          size={GoogleSigninButton.Size.Icon}
+          color={GoogleSigninButton.Color.Dark}
+          onPress={this._signIn}
+          disabled={this.state.isSigninInProgress} />
+    }
+}
+
+GoogleSignin.configure({
     scopes: ['https://www.googleapis.com/auth/drive.readonly'], // what API you want to access on behalf of the user, default is email and profile
     webClientId: 'AIzaSyC22xX94AZlwyQ4EK5fvqE1MP-Eyd_87lg', // client ID of type WEB for your server (needed to verify user ID and offline access)
     offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
@@ -71,16 +81,5 @@ export default class loginScreen extends React.Component{
     // google services are available
   } catch (err) {
     console.error('play services are not available');
-  }
-    
+  } 
   
-  render() {
-        <GoogleSigninButton
-          style={{ width: 48, height: 48 }}
-          size={GoogleSigninButton.Size.Icon}
-          color={GoogleSigninButton.Color.Dark}
-          onPress={this._signIn}
-          disabled={this.state.isSigninInProgress} />
-    }
-}
-
