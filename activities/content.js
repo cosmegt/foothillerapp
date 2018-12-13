@@ -38,7 +38,7 @@ export default class Content extends React.Component {
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>
           <CalendarScreen/>
         </View>
-        <View style={styles.slide}>
+        <View style={styles.slide2}>
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>
           <PlannerScreen/>
         </View>
@@ -55,14 +55,19 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     slide: {
-        flex: 1,
-        //justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#3fa2d3',
+      flex: 1,
+      //justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#3fa2d3',
     },
     text: {
-        color: '#fff',
-        fontSize: 30,
-        fontWeight: 'bold',
+      color: '#fff',
+      fontSize: 30,
+      fontWeight: 'bold',
+    },
+    slide2: {
+      flex: 1,
+      backgroundColor: '#3fa2d3',
+      //alignItems: 'center',
     }
 })
