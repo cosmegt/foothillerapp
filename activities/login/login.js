@@ -1,6 +1,5 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button } from "react-native"
-import Expo from "expo"
 
 export default class Login extends React.Component {
   constructor(props) {
