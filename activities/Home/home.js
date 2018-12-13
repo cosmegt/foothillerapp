@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
-import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 
 
 export default class HomeScreen extends React.Component {
