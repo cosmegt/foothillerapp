@@ -17,22 +17,14 @@ Do Not Touch This File
 
 
 */
-export default class DemoLogin extends Component {
-  render() {
-    return (
-     <Login />
-    );
-  }
-}
 
-AppRegistry.registerComponent('DemoLogin', () => DemoLogin);
 
 export default class App extends React.Component {
   render() {
 
     return (
       <SafeAreaView style={styles.default}>
-        <Content/>
+        <Login />
       </SafeAreaView>
     );
   }

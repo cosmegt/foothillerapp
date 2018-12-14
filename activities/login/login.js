@@ -1,5 +1,6 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button } from "react-native"
+import Content from './activities/content';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -35,11 +36,7 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        {this.state.signedIn ? (
-          <LoggedInPage name={this.state.name} photoUrl={this.state.photoUrl} />
-        ) : (
-          <LoginPage signIn={this.signIn} />
-        )}
+        <Content/>
       </View>
     )
   }
