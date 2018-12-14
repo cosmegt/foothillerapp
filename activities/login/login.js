@@ -57,11 +57,11 @@ const LoginPage = props => {
 
 const LoggedInPage = props => {
   return (
-    <View style={styles.container}>
+    <View>
       {/* <Text style={styles.header}>Welcome:{props.name}</Text>
       <Image style={styles.image} source={{ uri: props.photoUrl }} /> */}
       <Content />
-         
+
     </View>
   )
 }
