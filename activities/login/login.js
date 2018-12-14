@@ -1,6 +1,6 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button } from "react-native"
-import Content from './activities/content';
+import Content from '../content.js';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -58,8 +58,10 @@ const LoginPage = props => {
 const LoggedInPage = props => {
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Welcome:{props.name}</Text>
-      <Image style={styles.image} source={{ uri: props.photoUrl }} />
+      {/* <Text style={styles.header}>Welcome:{props.name}</Text>
+      <Image style={styles.image} source={{ uri: props.photoUrl }} /> */}
+      <Content />
+         
     </View>
   )
 }
