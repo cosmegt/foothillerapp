@@ -1,6 +1,6 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button } from "react-native"
-import Content from './activities/content';
+import Content from '../content';
 
 export default class Login extends React.Component {
   constructor(props) {
