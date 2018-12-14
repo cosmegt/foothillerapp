@@ -1,6 +1,6 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button } from "react-native"
-import Content from '../content';
+import Content from '../content.js';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -36,7 +36,7 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Content/>
+        <Content />
       </View>
     )
   }
