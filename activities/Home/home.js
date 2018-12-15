@@ -2,7 +2,8 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
-import Login from '../login/login.js';
+import { accountName, Login } from '../login/login.js';
+
 
 export default class HomeScreen extends React.Component {
   render() {
@@ -11,7 +12,7 @@ export default class HomeScreen extends React.Component {
       <View>
         
         <View>
-          <Text style={styles.Title}>{"\n"}<LoggedInPage name={this.state.name}/></Text>
+          <Text style={styles.Title}>{"\n"}<accountName name={this.state.name} /></Text>
         </View>
         <Swiper style={styles.subContent} showsPagination={false}>
           <View style={styles.subContent}>
