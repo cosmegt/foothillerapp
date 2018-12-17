@@ -1,7 +1,7 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button } from "react-native"
 import Content from '../content.js';
-export {accountName}
+export {accountName, accountEmail};
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -61,7 +61,7 @@ const LoggedInPage = props => {
     <View>
       {/* <Text style={styles.header}>Welcome:{props.name}</Text>
       <Image style={styles.image} source={{ uri: props.photoUrl }} /> */}
-      <Content nameGoogle={props.name}/>
+      <Content nameGoogle={props.name} emailGoogle={props.email}/>
 
     </View>
   )
@@ -74,7 +74,13 @@ const accountName = props => {
     </View>
   )
 }
-
+const accountEmail = props => {
+  return (
+    <View>
+      <Text>{props.email}</Text>
+    </View>
+  )
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,

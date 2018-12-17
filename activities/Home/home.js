@@ -11,7 +11,7 @@ export default class HomeScreen extends React.Component {
       <View>
         
         <View>
-          <Text style={styles.Title}>{"\n"}{this.props.name}</Text>
+          <Text style={styles.Title}>{"\n"}{this.props.name}{this.props.email}</Text>
         </View>
         <Swiper style={styles.subContent} showsPagination={false}>
           <View style={styles.subContent}>
