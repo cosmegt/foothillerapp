@@ -11,7 +11,7 @@ export default class HomeScreen extends React.Component {
       <View>
         
         <View>
-          <Text style={styles.Title}>{"\n"}{this.props.name}{this.props.email}</Text>
+          <Text style={styles.Title}>{"\n"}{this.props.name} {this.props.email}</Text>
         </View>
         <Swiper style={styles.subContent} showsPagination={false}>
           <View style={styles.subContent}>
@@ -48,9 +48,9 @@ const styles = {
 
   },
   subContent:{
-    flex: .5,
-    alignItems: 'center',
-    justifyContent: 'center',
+    //flex: .5,
+    //alignItems: 'center',
+    //justifyContent: 'center',
     // borderWidth: 3,
     // borderColor: '#FFF',
   }
