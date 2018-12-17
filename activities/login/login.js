@@ -14,13 +14,13 @@ export default class Login extends React.Component {
   }
   signIn = async () => {
     try {
+      console.log('Starting Async');
       const result = await Expo.Google.logInAsync({
-        //androidClientId:
-          //"279541889821-0jq9s32brq52pv5u9amblv8qpah7d94u.apps.googleusercontent.com",
+        androidClientId: "279541889821-0jq9s32brq52pv5u9amblv8qpah7d94u.apps.googleusercontent.com",
         iosClientId: "279541889821-0jq9s32brq52pv5u9amblv8qpah7d94u.apps.googleusercontent.com",
         scopes: ["profile", "email"]
       })
-
+      console.log(result);
       if (result.type === "success") {
         this.setState({
           signedIn: true,
@@ -61,7 +61,7 @@ const LoggedInPage = props => {
     <View>
       {/* <Text style={styles.header}>Welcome:{props.name}</Text>
       <Image style={styles.image} source={{ uri: props.photoUrl }} /> */}
-      <Content />
+      <Content nameGoogle={props.name}/>
 
     </View>
   )

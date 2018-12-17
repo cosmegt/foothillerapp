@@ -24,7 +24,7 @@ export default class Content extends React.Component {
       <Swiper containerStyle={styles.wrapper} showsButtons={false} showsPagination={false}>
         <View style={styles.slide}>
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>
-          <HomeScreen/>
+          <HomeScreen name={this.props.nameGoogle}/>
         </View>
         <View style={styles.slide}>
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>
