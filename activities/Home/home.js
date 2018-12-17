@@ -12,7 +12,7 @@ export default class HomeScreen extends React.Component {
       <View>
         
         <View>
-          <Text style={styles.Title}>{"\n"}<accountName name={this.state.name} /></Text>
+          <Text style={styles.Title}>{"\n"}Parker George</Text>
         </View>
         <Swiper style={styles.subContent} showsPagination={false}>
           <View style={styles.subContent}>
