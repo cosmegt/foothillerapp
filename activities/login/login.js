@@ -12,7 +12,8 @@ export default class Login extends React.Component {
       signedIn: false,
       name: "",
       photoUrl: "",
-      email:""
+      email:"",
+      text: ""
     }
   }
   signIn = async () => {
@@ -41,14 +42,30 @@ export default class Login extends React.Component {
   }
   render() {
    return ( 
- 
-      <View style={styles.container}>
+     <View style={styles.container}>>
+       <View>
+        <TextInput
+          style={fontSize=10}
+          placeholder="Student ID"
+          onChangeText={(text) => this.setState({text})}
+        />
+        <TextInput
+          
+          placeholder="Password"
+          onChangeText={(text) => this.setState({text})}
+        />
+      </View>
+
+      <View >
         {this.state.signedIn ? (
           <LoggedInPage name={this.state.name} photoUrl={this.state.photoUrl} email={this.state.email}/>
         ) : (
           <LoginPage signIn={this.signIn} />
         )}
       </View>
+
+     </View>
+      
     )
   }
 }
@@ -93,6 +110,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center"
+
   },
   header: {
     fontSize: 25
