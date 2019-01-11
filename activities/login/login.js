@@ -1,10 +1,12 @@
 import React from "react"
-import { StyleSheet, Text, View, Image, Button, FormLabel, FormInput, FormValidationMessage } from "react-native"
+import { StyleSheet, Text, View, Image, Button, TextInput} from "react-native"
 import Content from '../content.js';
-//export {accountName, accountEmail};
+export {accountName, accountEmail};
+
+
 
 export default class Login extends React.Component {
-  /*constructor(props) {
+  constructor(props) {
     super(props)
     this.state = {
       signedIn: false,
@@ -36,19 +38,11 @@ export default class Login extends React.Component {
     } catch (e) {
       console.log("error", e)
     }
-  }*/
-  render() {
-    return (
-      <View>
-        <FormLabel>Name</FormLabel>
-        <FormInput onChangeText={someFunction}/>
-        <FormValidationMessage>{'#'}</FormValidationMessage>
-      </View>
-      
-    )
   }
-}
-      /*<View style={styles.container}>
+  render() {
+   return ( 
+ 
+      <View style={styles.container}>
         {this.state.signedIn ? (
           <LoggedInPage name={this.state.name} photoUrl={this.state.photoUrl} email={this.state.email}/>
         ) : (
@@ -57,9 +51,9 @@ export default class Login extends React.Component {
       </View>
     )
   }
-}*/
+}
 
-/*const LoginPage = props => {
+const LoginPage = props => {
   return (
     <View>
       <Text style={styles.header}>Sign In With Google</Text>
@@ -71,8 +65,8 @@ export default class Login extends React.Component {
 const LoggedInPage = props => {
   return (
     <View>
-      { <Text style={styles.header}>Welcome:{props.name}</Text>
-      <Image style={styles.image} source={{ uri: props.photoUrl }} /> }
+      {/* <Text style={styles.header}>Welcome:{props.name}</Text> */}
+      {/* <Image style={styles.image} source={{ uri: props.photoUrl }} />  */}
       <Content nameGoogle={props.name} emailGoogle={props.email}/>
 
     </View>
@@ -111,4 +105,4 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderRadius: 150
   }
-})*/
+})

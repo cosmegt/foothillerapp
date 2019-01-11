@@ -50,7 +50,7 @@ const styles = {
   subContent:{
     //flex: .5,
     //alignItems: 'center',
-    //justifyContent: 'center',
+    // justifyContent: 'center',
     // borderWidth: 3,
     // borderColor: '#FFF',
   }
