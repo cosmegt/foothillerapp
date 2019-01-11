@@ -1,7 +1,7 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button, FormLabel, FormInput, FormValidationMessage } from "react-native"
 import Content from '../content.js';
-export {accountName, accountEmail};
+//export {accountName, accountEmail};
 
 export default class Login extends React.Component {
   /*constructor(props) {
