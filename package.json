@@ -19,7 +19,7 @@
     "react-native-checkbox-component": "^1.0.3",
     "react-native-elements": "^0.19.1",
     "react-native-swiper": "^1.5.13",
-    "react-navigation": "^2.17.0",
+    "react-navigation": "^2.18.3",
     "react-navigation-material-bottom-tabs": "^0.4.0"
   }
 }

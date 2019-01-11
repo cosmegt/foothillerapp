@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, Alert } from 'react-native';
+import { View, Text, Alert, Dimensions } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 //import { CheckBox, ListItem, Body, Container, Header, Content } from 'native-base';
-import { CheckBox } from 'react-native-elements'
+import { CheckBox, Button } from 'react-native-elements'
 
 export default class PlannerScreen extends React.Component {
   constructor(props){
@@ -13,10 +13,12 @@ export default class PlannerScreen extends React.Component {
     }
   }
   render() {
+    let deviceHeight = Dimensions.get('screen').height / 5
+    let deviceWidth = Dimensions.get('screen').width / 2
     return (
       <View>
         <Text style={styles.Title}>{"\n"}Planner</Text>
-        <CheckBox
+        {/*<CheckBox
           title='Test'
           checkedIcon='dot-circle-o'
           uncheckedIcon='circle-o'
@@ -24,11 +26,29 @@ export default class PlannerScreen extends React.Component {
           onPress={() => {
             this.setState({checked: !this.state.checked});
           }}
+        />*/}
+        <Button
+          title="Add Event"
+          titleStyle={{fontWeight: '700'}}
+          buttonStyle={{
+            backgroundColor:'#196ae5',
+            borderRadius:10,
+            bottom:-(Dimensions.get('screen').height-deviceHeight),
+            position: 'absolute',
+            width: Dimensions.get('screen').width-deviceWidth,
+            left: ((Dimensions.get('window').width/2)-((Dimensions.get('window').width-deviceWidth)/2))-10,
+          }}
+          onPress={() => {
+            
+          }}
         />
       </View>
     );
   }
 }
+
+//let deviceHeight = Dimensions.get('sceen').height
+//let deviceWidth = Dimensions.get('screen').width
 
 const styles ={
   Title: {
@@ -49,5 +69,8 @@ const styles ={
     alignItems: 'center',
     fontSize: 25,
     color: '#fff',
+  },
+  Button: {
+
   }
 }
