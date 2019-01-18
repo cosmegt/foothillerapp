@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Alert, Dimensions } from 'react-native';
 //import { CheckBox, ListItem, Body, Container, Header, Content } from 'native-base';
 import { CheckBox, Button } from 'react-native-elements';
+import {TabNavigator} from 'react-navigation'
 
 export default class PlannerScreen extends React.Component {
 
@@ -32,7 +33,7 @@ export default class PlannerScreen extends React.Component {
             left: ((Dimensions.get('window').width/2)-((Dimensions.get('window').width-deviceWidth)/2))-10,
           }}
           onPress={() => {
-            
+
           }}
         />
       </View>
