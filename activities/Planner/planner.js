@@ -1,17 +1,10 @@
 import React from 'react';
 import { View, Text, Alert, Dimensions } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
 //import { CheckBox, ListItem, Body, Container, Header, Content } from 'native-base';
-import { CheckBox, Button } from 'react-native-elements'
+import { CheckBox, Button } from 'react-native-elements';
 
 export default class PlannerScreen extends React.Component {
-  constructor(props){
-    super(props);
 
-    this.state = {
-      checked: false,
-    }
-  }
   render() {
     let deviceHeight = Dimensions.get('screen').height / 5
     let deviceWidth = Dimensions.get('screen').width / 2
