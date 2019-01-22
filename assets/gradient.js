@@ -19,7 +19,7 @@ export default class Gradient extends React.Component{
                 left: 0,
                 right: 0,
                 top: 0,
-                height: 500,
+                height: 5,
                 }}
             />
        );
