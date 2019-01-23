@@ -23,8 +23,8 @@ export default class Content extends React.Component {
     return (
       <Swiper containerStyle={styles.wrapper} showsButtons={false} showsPagination={false}>
         <View style={styles.slide}>
-          {/* <Gradient colorize="rgba(225, 225, 225,0.5)"/> */}
-          <HomeScreen/>
+          <Gradient colorize="rgba(0, 0, 0,0.5)"/>
+          <HomeScreen name={this.props.nameGoogle} email={this.props.emailGoogle}/>
         </View>
         <View style={styles.slide}>
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         flex: 1,
         //justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#1d2323',
+        backgroundColor: '#3fa2d3',
     },
     text: {
         color: '#fff',
