@@ -9,8 +9,9 @@ export default class HomeScreen extends React.Component {
     // some comment
     return (
       <View>
+        
         <View>
-          <Text style={styles.Title}>{"\n"}Cosme Chavez (327137)</Text>
+          <Text style={styles.Title}>{"\n"}{this.props.name} {this.props.email}</Text>
         </View>
         <Swiper style={styles.subContent} showsPagination={false}>
           <View style={styles.subContent}>
@@ -38,6 +39,8 @@ const styles = {
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold',
+    borderBottomWidth: 3,
+    borderBottomColor: '#FFF',
   },
   text: {
     color: '#FFF',
@@ -45,9 +48,9 @@ const styles = {
 
   },
   subContent:{
-    flex: .5,
-    alignItems: 'center',
-    justifyContent: 'center',
+    //flex: .5,
+    //alignItems: 'center',
+    // justifyContent: 'center',
     // borderWidth: 3,
     // borderColor: '#FFF',
   }
