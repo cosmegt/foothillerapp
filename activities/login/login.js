@@ -73,6 +73,7 @@ export default class Login extends React.Component {
 const LoginPage = props => {
   return (
     <View>
+      <Text style={styles.title}>Welcome to the Student Assistant App</Text>
       <Text style={styles.header}>Sign In With Google</Text>
       <Button title="Sign in with Google" onPress={() => props.signIn()} />
     </View>
@@ -113,7 +114,8 @@ const styles = StyleSheet.create({
 
   },
   header: {
-    fontSize: 25
+    fontSize: 25,
+    textAlign: "center"
   },
   image: {
     marginTop: 15,
@@ -122,5 +124,10 @@ const styles = StyleSheet.create({
     borderColor: "rgba(0,0,0,0.2)",
     borderWidth: 3,
     borderRadius: 150
+  },
+  title: {
+    fontSize: 35,
+    textAlign: "center",
+    marginBottom: 100
   }
 })
