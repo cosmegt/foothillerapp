@@ -7,7 +7,8 @@ import {
   View,
   SafeAreaView,
 } from 'react-native';
-import Content from './activities/content'
+import Content from './activities/content';
+import Login from './activities/login/login';
 /*
 
 
@@ -20,9 +21,10 @@ Do Not Touch This File
 
 export default class App extends React.Component {
   render() {
+
     return (
       <SafeAreaView style={styles.default}>
-        <Content/>
+        <Login />
       </SafeAreaView>
     );
   }
