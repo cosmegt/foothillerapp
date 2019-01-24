@@ -43,7 +43,7 @@ export default class Login extends React.Component {
   render() {
    return ( 
      <View style={styles.container}>>
-       <View>
+       {/*<View>
         <TextInput
           style={fontSize=10}
           placeholder="Student ID"
@@ -54,7 +54,7 @@ export default class Login extends React.Component {
           placeholder="Password"
           onChangeText={(text) => this.setState({text})}
         />
-      </View>
+       </View>*/}
 
       <View >
         {this.state.signedIn ? (
