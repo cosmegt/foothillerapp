@@ -17,5 +17,8 @@
     "react-native-swiper": "^1.5.13",
     "react-navigation": "^2.17.0",
     "react-navigation-material-bottom-tabs": "^0.4.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.2.1"
   }
 }
