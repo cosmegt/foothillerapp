@@ -42,7 +42,7 @@ export default class Login extends React.Component {
   }
   render() {
    return ( 
-     <View style={styles.container}>>
+     <View style={styles.container}>
        {/*<View>
         <TextInput
           style={fontSize=10}
@@ -73,7 +73,7 @@ export default class Login extends React.Component {
 const LoginPage = props => {
   return (
     <View>
-      <Text style={styles.title}>Welcome to the Student Assistant App</Text>
+      {/* <Text style={styles.title}>Welcome to the Student Assistant App</Text> */}
       <Text style={styles.header}>Sign In With Google</Text>
       <Button title="Sign in with Google" onPress={() => props.signIn()} />
     </View>
