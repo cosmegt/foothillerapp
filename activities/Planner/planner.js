@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, Alert, Dimensions } from 'react-native';
 //import { CheckBox, ListItem, Body, Container, Header, Content } from 'native-base';
 import { CheckBox, Button } from 'react-native-elements';
-import {TabNavigator} from 'react-navigation'
 
 export default class PlannerScreen extends React.Component {
 
@@ -12,15 +11,6 @@ export default class PlannerScreen extends React.Component {
     return (
       <View>
         <Text style={styles.Title}>{"\n"}Planner</Text>
-        {/*<CheckBox
-          title='Test'
-          checkedIcon='dot-circle-o'
-          uncheckedIcon='circle-o'
-          checked={this.state.checked}
-          onPress={() => {
-            this.setState({checked: !this.state.checked});
-          }}
-        />*/}
         <Button
           title="Add Event"
           titleStyle={{fontWeight: '700'}}
@@ -32,17 +22,14 @@ export default class PlannerScreen extends React.Component {
             width: Dimensions.get('screen').width-deviceWidth,
             left: ((Dimensions.get('window').width/2)-((Dimensions.get('window').width-deviceWidth)/2))-10,
           }}
-          onPress={() => {
-
-          }}
+          onPress={() =>
+            Alert.alert('something')
+          }
         />
       </View>
     );
   }
 }
-
-//let deviceHeight = Dimensions.get('sceen').height
-//let deviceWidth = Dimensions.get('screen').width
 
 const styles ={
   Title: {
