@@ -5,6 +5,13 @@ import { createStackNavigator } from 'react-navigation';
 
 
 export default class CalendarScreen extends React.Component {
+  constructor () {
+  super()
+  this.state = {
+    who: "React"
+  }
+}
+
   render() {
     return (
       <View>
