@@ -17,7 +17,6 @@ import GradesScreen from './Grades/grades';
 import CalendarScreen from './Calendar/calendar';
 import PlannerScreen from './Planner/planner'
 
-
 export default class Content extends React.Component {
   render() {
     return (

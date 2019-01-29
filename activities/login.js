@@ -1,6 +1,6 @@
 import React from "react"
-import { StyleSheet, Text, View, Image, Button, TextInput} from "react-native"
-import Content from '../content.js';
+import { StyleSheet, Text, View, Image, Button} from "react-native"
+import Content from './content.js';
 export {accountName, accountEmail};
 
 
@@ -43,27 +43,11 @@ export default class Login extends React.Component {
   render() {
    return ( 
      <View style={styles.container}>
-       {/*<View>
-        <TextInput
-          style={fontSize=10}
-          placeholder="Student ID"
-          onChangeText={(text) => this.setState({text})}
-        />
-        <TextInput
-          
-          placeholder="Password"
-          onChangeText={(text) => this.setState({text})}
-        />
-       </View>*/}
-
-      <View >
         {this.state.signedIn ? (
-          <LoggedInPage name={this.state.name} photoUrl={this.state.photoUrl} email={this.state.email}/>
+          <LoggedInPage nameGoogle={this.props.name} emailGoogle={this.props.email}/>
         ) : (
           <LoginPage signIn={this.signIn} />
         )}
-      </View>
-
      </View>
       
     )
@@ -73,7 +57,7 @@ export default class Login extends React.Component {
 const LoginPage = props => {
   return (
     <View>
-      {/* <Text style={styles.title}>Welcome to the Student Assistant App</Text> */}
+      <Text style={styles.title}>Welcome to the Student Assistant App</Text>
       <Text style={styles.header}>Sign In With Google</Text>
       <Button title="Sign in with Google" onPress={() => props.signIn()} />
     </View>
@@ -83,10 +67,7 @@ const LoginPage = props => {
 const LoggedInPage = props => {
   return (
     <View>
-      {/* <Text style={styles.header}>Welcome:{props.name}</Text> */}
-      {/* <Image style={styles.image} source={{ uri: props.photoUrl }} />  */}
       <Content nameGoogle={props.name} emailGoogle={props.email}/>
-
     </View>
   )
 }
