@@ -1,6 +1,6 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button} from "react-native"
-import Content from './content.js';
+import Content from '../content.js';
 export {accountName, accountEmail};
 
 
