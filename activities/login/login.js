@@ -1,6 +1,6 @@
 import React from "react"
-import { StyleSheet, Text, View, Image, Button} from "react-native"
-import Content from './content.js';
+import { StyleSheet, Text, View, Image, Button, TextInput} from "react-native"
+import Content from '../content.js';
 export {accountName, accountEmail};
 
 
@@ -13,7 +13,7 @@ export default class Login extends React.Component {
       name: "",
       photoUrl: "",
       email:"",
-      text: ""
+      text: "",
     }
   }
   signIn = async () => {
@@ -42,11 +42,8 @@ export default class Login extends React.Component {
   }
   render() {
    return ( 
-<<<<<<< HEAD:activities/login.js
-     <View style={styles.container}>
-=======
      <View style={styles.container}>>
-       {/*<View>
+       <View>
         <TextInput
           style={fontSize=10}
           placeholder="Student ID"
@@ -57,15 +54,16 @@ export default class Login extends React.Component {
           placeholder="Password"
           onChangeText={(text) => this.setState({text})}
         />
-       </View>*/}
+      </View>
 
       <View >
->>>>>>> parent of 959db41... Merge branch 'master' of https://github.com/cosmegt/foothillerapp:activities/login/login.js
         {this.state.signedIn ? (
-          <LoggedInPage nameGoogle={this.props.name} emailGoogle={this.props.email}/>
+          <LoggedInPage name={this.state.name} photoUrl={this.state.photoUrl} email={this.state.email}/>
         ) : (
           <LoginPage signIn={this.signIn} />
         )}
+      </View>
+
      </View>
       
     )
@@ -75,7 +73,6 @@ export default class Login extends React.Component {
 const LoginPage = props => {
   return (
     <View>
-      <Text style={styles.title}>Welcome to the Student Assistant App</Text>
       <Text style={styles.header}>Sign In With Google</Text>
       <Button title="Sign in with Google" onPress={() => props.signIn()} />
     </View>
@@ -85,7 +82,10 @@ const LoginPage = props => {
 const LoggedInPage = props => {
   return (
     <View>
+      {/* <Text style={styles.header}>Welcome:{props.name}</Text> */}
+      {/* <Image style={styles.image} source={{ uri: props.photoUrl }} />  */}
       <Content nameGoogle={props.name} emailGoogle={props.email}/>
+
     </View>
   )
 }
@@ -113,8 +113,7 @@ const styles = StyleSheet.create({
 
   },
   header: {
-    fontSize: 25,
-    textAlign: "center"
+    fontSize: 25
   },
   image: {
     marginTop: 15,
@@ -123,10 +122,5 @@ const styles = StyleSheet.create({
     borderColor: "rgba(0,0,0,0.2)",
     borderWidth: 3,
     borderRadius: 150
-  },
-  title: {
-    fontSize: 35,
-    textAlign: "center",
-    marginBottom: 100
   }
 })

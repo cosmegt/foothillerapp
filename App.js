@@ -8,7 +8,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 import Content from './activities/content';
-import Login from './activities/login';
+import Login from './activities/login/login';
 /*
 
 
