@@ -1,14 +1,14 @@
-import React from 'react';
-import {Text, View} from 'react-native';
+// import React from 'react';
+// import {Text, View} from 'react-native';
 
-export default class EventScreen extends React.Component {
+// export default class EventScreen extends React.Component {
 
-    render() {
+//     render() {
 
-        return(
-            <View>
-                <Text>Hello</Text>
-            </View>
-        )
-    }
-}
+//         return(
+//             <View>
+//                 <Text>Hello</Text>
+//             </View>
+//         )
+//     }
+// }
