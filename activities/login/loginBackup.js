@@ -1,6 +1,6 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button} from "react-native"
-import Content from './content.js';
+import Content from '../content.js';
 export {accountName, accountEmail};
 
 
@@ -42,10 +42,7 @@ export default class Login extends React.Component {
   }
   render() {
    return ( 
-<<<<<<< HEAD:activities/login.js
      <View style={styles.container}>
-=======
-     <View style={styles.container}>>
        {/*<View>
         <TextInput
           style={fontSize=10}
@@ -60,14 +57,14 @@ export default class Login extends React.Component {
        </View>*/}
 
       <View >
->>>>>>> parent of 959db41... Merge branch 'master' of https://github.com/cosmegt/foothillerapp:activities/login/login.js
+
         {this.state.signedIn ? (
           <LoggedInPage nameGoogle={this.props.name} emailGoogle={this.props.email}/>
         ) : (
           <LoginPage signIn={this.signIn} />
         )}
-     </View>
-      
+      </View>
+     </View> 
     )
   }
 }
