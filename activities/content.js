@@ -16,7 +16,6 @@ import ScheduleScreen from './Schedule/schedule';
 import GradesScreen from './Grades/grades';
 import CalendarScreen from './Calendar/calendar';
 import PlannerScreen from './Planner/planner'
-//import AppFlowScreen from './Planner/planner';
 
 export default class Content extends React.Component {
   render() {

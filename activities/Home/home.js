@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
+//import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
 
 
