@@ -42,7 +42,7 @@ export default class Login extends React.Component {
   }
   render() {
    return ( 
-     <View style={styles.container}>>
+     <View style={styles.container}>
        {/* <View>
         <TextInput
           style={fontSize=10}
