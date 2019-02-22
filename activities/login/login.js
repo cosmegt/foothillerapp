@@ -94,14 +94,14 @@ const LoggedInPage = props => {
 const accountName = props => {
   return (
     <View>
-      <Text>{props.name}</Text>
+      <Text>{this.props.name}</Text>
     </View>
   )
 }
 const accountEmail = props => {
   return (
     <View>
-      <Text>{props.email}</Text>
+      <Text>{this.props.email}</Text>
     </View>
   )
 }
