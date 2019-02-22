@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Image, } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
-import Button from 'react-native-elements';
+//import Button from 'react-native-elements';
 
 
 export default class HomeScreen extends React.Component {
@@ -27,14 +27,7 @@ export default class HomeScreen extends React.Component {
           </View>
           <View style={styles.subContent}>
             <Text style={styles.text}>Your Next Class {"\n"}Math</Text>    
-          </View>
-          <View>
-            <Button
-              title="Log Out"
-            
-            
-            />
-          </View>  
+          </View> 
         </Swiper>
       </View>
     );
