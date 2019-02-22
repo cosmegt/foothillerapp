@@ -8,14 +8,23 @@ import {
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 //Import Misc Assets
-import Gradient from '../assets/gradient'
+import Gradient from '../assets/gradient';
+import {createStackNavigator, StackNavigator} from 'react-navigation'
 
 //Project Activities
 import HomeScreen from './Home/home';
 import ScheduleScreen from './Schedule/schedule';
 import GradesScreen from './Grades/grades';
 import CalendarScreen from './Calendar/calendar';
-import PlannerScreen from './Planner/planner'
+import PlannerScreen from './Planner/plannerScreen/planner';
+import EventScreen from './Planner/plannerScreen/event'
+
+// const Nav = StackNavigator({
+//   Plans: {screen: PlannerScreen},
+//   Even: {screen: EventScreen}
+// }, {
+//   initialRouteName: 'Plans',
+// })
 
 export default class Content extends React.Component {
   render() {
