@@ -15,7 +15,8 @@ import HomeScreen from './Home/home';
 import ScheduleScreen from './Schedule/schedule';
 import GradesScreen from './Grades/grades';
 import CalendarScreen from './Calendar/calendar';
-import PlannerScreen from './Planner/planner'
+import PlannerScreen from './Planner/planner';
+import SettingsScreen from './Settings/settings'
 
 
 export default class Content extends React.Component {
@@ -28,7 +29,7 @@ export default class Content extends React.Component {
         </View>
         <View style={styles.slide}>
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>
-          <Settings />
+          <SettingsScreen />
         </View>
         <View style={styles.slide}>
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>

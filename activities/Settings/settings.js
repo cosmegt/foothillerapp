@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Image, } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
-//import Button from 'react-native-elements';
+
 
 
 export default class HomeScreen extends React.Component {
