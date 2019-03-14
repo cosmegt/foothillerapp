@@ -4,7 +4,7 @@ import {
   StyleSheet,
   Text,
   View,
-  Dimensions
+  Dimensions,
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 //Import Misc Assets
