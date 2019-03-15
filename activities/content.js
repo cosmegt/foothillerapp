@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 //Import Misc Assets
-import Gradient from '../assets/gradient'
+import Gradient from '../assets/gradient';
 
 //Project Activities
 import HomeScreen from './Home/home';
@@ -16,21 +16,25 @@ import ScheduleScreen from './Schedule/schedule';
 import GradesScreen from './Grades/grades';
 import CalendarScreen from './Calendar/calendar';
 import PlannerScreen from './Planner/planner';
-import SettingsScreen from './Settings/settings'
+import SettingsScreen from './Settings/settings';
 
 
 export default class Content extends React.Component {
   render() {
     return (
       <Swiper containerStyle={styles.wrapper} showsButtons={false} showsPagination={false}>
-        <View style={styles.slide}>
-          <Gradient colorize="rgba(0, 0, 0,0.5)"/>
-          <HomeScreen name={this.props.nameGoogle} email={this.props.emailGoogle}/>
-        </View>
-        <View style={styles.slide}>
-          <Gradient colorize="rgba(0, 0, 0,0.5)"/>
-          <SettingsScreen />
-        </View>
+        
+        <Swiper horizontal={false} showsPagination={false} showsButtons={false} containerStyle={styles.wrapper} loop={false}>
+          <View style={styles.slide}>
+            <Gradient colorize="rgba(0, 0, 0,0.5)"/>
+            <HomeScreen name={this.props.nameGoogle} email={this.props.emailGoogle}/>
+          </View>
+          <View style={styles.slide}>
+              <Gradient colorize="rgba(0, 0, 0,0.5)"/>
+              <SettingsScreen />
+          </View>
+        </Swiper>
+
         <View style={styles.slide}>
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>
           <GradesScreen/>

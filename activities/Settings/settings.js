@@ -5,18 +5,16 @@ import Swiper from 'react-native-swiper';
 
 
 
-export default class HomeScreen extends React.Component {
+export default class SettingsScreen extends React.Component {
   render() {
     // some comment
     return (
       <View>
         
         <View>
-          <Text style={styles.Title}>{"\n"}{this.props.name} {this.props.email}</Text>
+          <Text style={styles.Title}>{"\n"} Settings</Text>
         </View>
-        <Swiper style={styles.subContent} showsPagination={false}>
-          
-        </Swiper>
+        
       </View>
     );
   }
