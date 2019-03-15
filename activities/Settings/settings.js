@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, Image, } from 'react-native';
+import { View, Text, Button, Alert} from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import Swiper from 'react-native-swiper';
+
 
 
 
@@ -13,6 +13,14 @@ export default class SettingsScreen extends React.Component {
         
         <View>
           <Text style={styles.Title}>{"\n"} Settings</Text>
+        
+        
+          <Button
+            onPress={() => Alert.alert("Hello")}
+            title="Logout"
+            color="#B22222"
+            accessibilityLabel="Logout of your student assistant account"
+          />
         </View>
         
       </View>
