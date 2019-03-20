@@ -18,8 +18,8 @@ export default class SettingsScreen extends React.Component {
           <Button
             onPress={() => Alert.alert("Hello")}
             title="Logout"
-            color="#B22222"
             accessibilityLabel="Logout of your student assistant account"
+            style={styles.logoutButton}
           />
         </View>
         
@@ -48,5 +48,9 @@ const styles = {
     // justifyContent: 'center',
     // borderWidth: 3,
     // borderColor: '#FFF',
+  },
+  logoutButton: {
+    backgroundColor: '#B22222',
+    color: "#FFFFFF"
   }
 }
