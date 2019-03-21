@@ -1,13 +1,12 @@
 import React from 'react';
 import { View, Text, Button, Alert, TouchableOpacity} from 'react-native';
-import { createStackNavigator } from 'react-navigation';
 
 
 
 
 export default class SettingsScreen extends React.Component {
   render() {
-    // some comment
+
     return (
       <View>
         

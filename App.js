@@ -8,7 +8,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 import Content from './activities/content';
-import Login from './activities/login/login';
+import LoginScreen from './activities/login/login';
 /*
 
 
@@ -17,6 +17,8 @@ Do Not Touch This File
 
 
 */
+
+
 
 
 export default class App extends React.Component {

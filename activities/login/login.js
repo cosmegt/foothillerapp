@@ -5,7 +5,7 @@ export {accountName, accountEmail};
 
 
 
-export default class Login extends React.Component {
+export default class LoginScreen extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
