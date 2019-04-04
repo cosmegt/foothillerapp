@@ -43,18 +43,7 @@ export default class LoginScreen extends React.Component {
   render() {
    return ( 
      <View style={styles.container}>
-       {/*<View>
-        <TextInput
-          style={fontSize=10}
-          placeholder="Student ID"
-          onChangeText={(text) => this.setState({text})}
-        />
-        <TextInput
-          
-          placeholder="Password"
-          onChangeText={(text) => this.setState({text})}
-        />
-       </View>*/}
+       
 
       <View >
         {this.state.signedIn ? (
@@ -75,6 +64,19 @@ const LoginPage = props => {
     <View>
       <Text style={styles.header}>Sign In With Google</Text>
       <Button title="Sign in with Google" onPress={() => props.signIn()} />
+
+      <View>
+        <TextInput
+          style={fontSize=10}
+          placeholder="Student ID"
+          onChangeText={(text) => this.setState({text})}
+        />
+        <TextInput
+          style={fontSize=10}
+          placeholder="Password"
+          onChangeText={(text) => this.setState({text})}
+        />
+       </View>
     </View>
   )
 }
