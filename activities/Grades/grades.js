@@ -13,8 +13,14 @@ export default class GradesScreen extends React.Component {
         <TextInput
           style={fontSize=10}
           placeholder="Password"
-          onChangeText={(text) => this.setState({text})}
+          onChangeText={(text) => {
+              this.setState({text});
+              console.log(text);
+
+            } 
+          }
           secureTextEntry={true}
+
         />
         
 

@@ -62,7 +62,8 @@ export default class LoginScreen extends React.Component {
 const LoginPage = props => {
   return (
     <View>
-      <Text style={styles.header}>Sign In With Google</Text>
+      <Text style={styles.header}>Welcome to the Student Assisntant App</Text>
+      <Text>please sign in with your school email</Text>
       <Button title="Sign in with Google" onPress={() => props.signIn()} />
 
       
@@ -114,7 +115,10 @@ const styles = StyleSheet.create({
 
   },
   header: {
-    fontSize: 25
+    fontSize: 25,
+    alignItems: "center",
+    justifyContent: "center"
+
   },
   image: {
     marginTop: 15,
