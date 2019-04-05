@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TextInput, Button } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
 
@@ -10,6 +10,15 @@ export default class GradesScreen extends React.Component {
         <View>
           <Text style={styles.Title}>{"\n"}Grades</Text>
         </View>
+        <TextInput
+          style={fontSize=10}
+          placeholder="Password"
+          onChangeText={(text) => this.setState({text})}
+          secureTextEntry={true}
+        />
+        
+
+        
       </View>
     );
   }

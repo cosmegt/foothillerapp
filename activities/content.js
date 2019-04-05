@@ -27,7 +27,7 @@ export default class Content extends React.Component {
         <Swiper horizontal={false} showsPagination={false} showsButtons={false} containerStyle={styles.wrapper} loop={false}>
           <View style={styles.slide}>
             <Gradient colorize="rgba(0, 0, 0,0.5)"/>
-            <HomeScreen name={this.props.nameGoogle} email={this.props.emailGoogle}/>
+            <HomeScreen name={this.props.nameGoogle} email={this.props.emailGoogle} photo={this.props.photoUrl}/>
           </View>
           <View style={styles.slide}>
               <Gradient colorize="rgba(0, 0, 0,0.5)"/>

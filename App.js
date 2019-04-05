@@ -26,7 +26,7 @@ export default class App extends React.Component {
 
     return (
       <SafeAreaView style={styles.default}>
-        <LoginScreen />
+        <Content />
       </SafeAreaView>
     );
   }

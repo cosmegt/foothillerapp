@@ -1,7 +1,7 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button, TextInput} from "react-native"
 import Content from '../content.js';
-export {accountName, accountEmail};
+export {accountName, accountEmail, accountPhoto};
 
 
 
@@ -65,18 +65,7 @@ const LoginPage = props => {
       <Text style={styles.header}>Sign In With Google</Text>
       <Button title="Sign in with Google" onPress={() => props.signIn()} />
 
-      <View>
-        <TextInput
-          style={fontSize=10}
-          placeholder="Student ID"
-          onChangeText={(text) => this.setState({text})}
-        />
-        <TextInput
-          style={fontSize=10}
-          placeholder="Password"
-          onChangeText={(text) => this.setState({text})}
-        />
-       </View>
+      
     </View>
   )
 }
@@ -84,12 +73,11 @@ const LoginPage = props => {
 const LoggedInPage = props => {
   email = props.email;
   email = email.substring(6,0);
-  console.log(email);
   return (
     <View>
       {/* <Text style={styles.header}>Welcome:{props.name}</Text> */}
       {/* <Image style={styles.image} source={{ uri: props.photoUrl }} />  */}
-      <Content nameGoogle={props.name} emailGoogle={props.email}/>
+      <Content nameGoogle={props.name} emailGoogle={props.email} photoUrl={props.photoUrl}/>
     </View>
   )
 
@@ -107,6 +95,13 @@ const accountEmail = props => {
   return (
     <View>
       <Text>{props.email}</Text>
+    </View>
+  )
+}
+const accountPhoto = props => {
+  return (
+    <View>
+      <Text>{props.photoUrl}</Text>
     </View>
   )
 }

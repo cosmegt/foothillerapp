@@ -17,7 +17,7 @@ export default class HomeScreen extends React.Component {
         <Swiper style={styles.subContent} showsPagination={false}>
           <View style={styles.subContent}>
             <Image 
-              source={require('./schedule.png')}
+              source={{uri: this.props.photo}} 
               style={{
                 width: 50,
                 height: 50,
