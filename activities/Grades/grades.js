@@ -7,6 +7,7 @@ export default class GradesScreen extends React.Component {
   state = {
     password: ""
   }
+
   handlePassword = (text) => {
     this.setState({ password: text })
   }
@@ -25,8 +26,7 @@ export default class GradesScreen extends React.Component {
           style={styles.input}
           placeholder="Password"
           onChangeText={(text) => {
-              this.handle.handlePassword;
-              console.log(text);
+              this.handlePassword(text);
 
             } 
           }
@@ -47,7 +47,21 @@ export default class GradesScreen extends React.Component {
     );
   }
 }
-
+// Fetch Application
+fetch("http://cozme.tech:69/grades.php", {
+  method: "POST",
+  headers: new Headers({
+    'Content-Type': 'application/x-www-form-urlencoded', // <-- Specifying the Content-Type
+  }),
+  body: "username=326237&password=ParkerHG09SD",
+})
+  .then((response) => response.text())
+  .then((responseText) => {
+        console.log(responseText);
+  })
+  .catch((error) => {
+      console.log("reset client error-------",error);
+  });
 
 const styles = {
   Title: {
@@ -70,16 +84,16 @@ const styles = {
   input: {
     margin: 15,
     height: 40,
-    borderColor: '#7a42f4',
+    borderColor: '#FFFFFF',
     borderWidth: 1
  },
  submitButton: {
-    backgroundColor: '#7a42f4',
+    backgroundColor: '#FFFFFF',
     padding: 10,
     margin: 15,
     height: 40,
  },
  submitButtonText:{
-    color: 'white'
+    color: 'black'
  }
 }
