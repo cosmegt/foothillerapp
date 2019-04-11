@@ -3,9 +3,10 @@ import { View, Text, TextInput, Button, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
 
+
 export default class GradesScreen extends React.Component {
   state = {
-    password: ""
+    password: "",
   }
 
   handlePassword = (text) => {
@@ -14,7 +15,25 @@ export default class GradesScreen extends React.Component {
   login = (password) => {
     alert('password: ' + password)
  }
+
+ 
   render() {
+  // Fetch Application
+  fetch("http://cozme.tech:69/grades.php", {
+    method: "POST",
+    headers: new Headers({
+      'Content-Type': 'application/x-www-form-urlencoded', // <-- Specifying the Content-Type
+    }),
+    body: "username="+ this.props.email +"&password=",
+  })
+    .then((response) => response.text())
+    .then((responseText) => {
+          console.log(responseText);
+    })
+    .catch((error) => {
+        console.log("reset client error-------",error);
+    });
+
     return (
       
       <View>
@@ -46,22 +65,10 @@ export default class GradesScreen extends React.Component {
     </View>
     );
   }
+  
 }
-// Fetch Application
-fetch("http://cozme.tech:69/grades.php", {
-  method: "POST",
-  headers: new Headers({
-    'Content-Type': 'application/x-www-form-urlencoded', // <-- Specifying the Content-Type
-  }),
-  body: "username=326237&password=ParkerHG09SD",
-})
-  .then((response) => response.text())
-  .then((responseText) => {
-        console.log(responseText);
-  })
-  .catch((error) => {
-      console.log("reset client error-------",error);
-  });
+
+
 
 const styles = {
   Title: {

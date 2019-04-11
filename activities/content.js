@@ -37,7 +37,7 @@ export default class Content extends React.Component {
 
         <View style={styles.slide}>
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>
-          <GradesScreen/>
+          <GradesScreen email={this.props.emailGoogle}/>
         </View>
         <View style={styles.slide}>
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>
