@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
+
 
 
 export default class HomeScreen extends React.Component {
@@ -16,7 +17,7 @@ export default class HomeScreen extends React.Component {
         <Swiper style={styles.subContent} showsPagination={false}>
           <View style={styles.subContent}>
             <Image 
-              source={require('./schedule.png')}
+              source={{uri: this.props.photo}} 
               style={{
                 width: 50,
                 height: 50,
@@ -26,7 +27,7 @@ export default class HomeScreen extends React.Component {
           </View>
           <View style={styles.subContent}>
             <Text style={styles.text}>Your Next Class {"\n"}Math</Text>    
-          </View>
+          </View> 
         </Swiper>
       </View>
     );
@@ -48,8 +49,8 @@ const styles = {
 
   },
   subContent:{
-    //flex: .5,
-    //alignItems: 'center',
+    // flex: .5,
+    // alignItems: 'center',
     // justifyContent: 'center',
     // borderWidth: 3,
     // borderColor: '#FFF',
