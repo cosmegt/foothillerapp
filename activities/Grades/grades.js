@@ -13,18 +13,12 @@ export default class GradesScreen extends React.Component {
     this.setState({ password: text })
   }
   login = (password) => {
-    alert('password: ' + password)
- }
-
- 
-  render() {
-  // Fetch Application
-  fetch("http://cozme.tech:69/grades.php", {
+    fetch("http://cozme.tech:69/grades.php", {
     method: "POST",
     headers: new Headers({
       'Content-Type': 'application/x-www-form-urlencoded', // <-- Specifying the Content-Type
     }),
-    body: "username="+ this.props.email +"&password=",
+    body: "username="+ email +"&password=" + password,
   })
     .then((response) => response.text())
     .then((responseText) => {
@@ -33,6 +27,14 @@ export default class GradesScreen extends React.Component {
     .catch((error) => {
         console.log("reset client error-------",error);
     });
+ }
+
+ 
+  render() {
+  // Fetch Application
+  var email = this.props.email;
+  email = email.substring(0,6);
+  
 
     return (
       
