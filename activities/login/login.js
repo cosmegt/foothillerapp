@@ -76,8 +76,6 @@ const LoggedInPage = props => {
   email = email.substring(6,0);
   return (
     <View>
-      {/* <Text style={styles.header}>Welcome:{props.name}</Text> */}
-      {/* <Image style={styles.image} source={{ uri: props.photoUrl }} />  */}
       <Content nameGoogle={props.name} emailGoogle={props.email} photoUrl={props.photoUrl}/>
     </View>
   )
