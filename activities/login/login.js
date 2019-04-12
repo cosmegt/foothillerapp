@@ -1,11 +1,11 @@
 import React from "react"
 import { StyleSheet, Text, View, Image, Button, TextInput} from "react-native"
 import Content from '../content.js';
-export {accountName, accountEmail};
+export {accountName, accountEmail, accountPhoto};
 
 
 
-export default class Login extends React.Component {
+export default class LoginScreen extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -13,7 +13,7 @@ export default class Login extends React.Component {
       name: "",
       photoUrl: "",
       email:"",
-      text: "",
+      text: ""
     }
   }
   signIn = async () => {
@@ -43,18 +43,7 @@ export default class Login extends React.Component {
   render() {
    return ( 
      <View style={styles.container}>
-       {/* <View>
-        <TextInput
-          style={fontSize=10}
-          placeholder="Student ID"
-          onChangeText={(text) => this.setState({text})}
-        />
-        <TextInput
-          
-          placeholder="Password"
-          onChangeText={(text) => this.setState({text})}
-        />
-      </View> */}
+       
 
       <View >
         {this.state.signedIn ? (
@@ -73,35 +62,45 @@ export default class Login extends React.Component {
 const LoginPage = props => {
   return (
     <View>
-      <Text style={styles.title}>Welcome to the Student Assistant App</Text>
-      <Text style={styles.header}>Sign In With Google</Text>
+      <Text style={styles.header}>Welcome to the Student Assisntant App</Text>
+      <Text>please sign in with your school email</Text>
       <Button title="Sign in with Google" onPress={() => props.signIn()} />
+
+      
     </View>
   )
 }
 
 const LoggedInPage = props => {
+  email = props.email;
+  email = email.substring(6,0);
   return (
     <View>
-      {/* <Text style={styles.header}>Welcome:{props.name}</Text> */}
-      {/* <Image style={styles.image} source={{ uri: props.photoUrl }} />  */}
-      <Content nameGoogle={props.name} emailGoogle={props.email}/>
-
+      <Content nameGoogle={props.name} emailGoogle={props.email} photoUrl={props.photoUrl}/>
     </View>
   )
+
 }
+
 
 const accountName = props => {
   return (
     <View>
-      <Text>{this.props.name}</Text>
+      <Text>{props.name}</Text>
     </View>
   )
 }
 const accountEmail = props => {
   return (
     <View>
-      <Text>{this.props.email}</Text>
+      <Text>{props.email}</Text>
+    </View>
+  )
+}
+const accountPhoto = props => {
+  return (
+    <View>
+      <Text>{props.photoUrl}</Text>
     </View>
   )
 }
@@ -115,7 +114,9 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 25,
-    textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center"
+
   },
   image: {
     marginTop: 15,
@@ -124,10 +125,5 @@ const styles = StyleSheet.create({
     borderColor: "rgba(0,0,0,0.2)",
     borderWidth: 3,
     borderRadius: 150
-  },
-  title: {
-    fontSize: 35,
-    textAlign: "center",
-    marginBottom: 100
   }
 })
