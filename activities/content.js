@@ -17,14 +17,7 @@ import ScheduleScreen from './Schedule/schedule';
 import GradesScreen from './Grades/grades';
 import CalendarScreen from './Calendar/calendar';
 import PlannerScreen from './Planner/plannerScreen/planner';
-import EventScreen from './Planner/plannerScreen/event'
-
-// const Nav = StackNavigator({
-//   Plans: {screen: PlannerScreen},
-//   Even: {screen: EventScreen}
-// }, {
-//   initialRouteName: 'Plans',
-// })
+import PlanScreen from './Planner/plannerScreen/planner';
 
 export default class Content extends React.Component {
   render() {
@@ -48,15 +41,13 @@ export default class Content extends React.Component {
         </View>
         <View style={styles.slide2}>
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>
-          <PlannerScreen/>
+          <PlanScreen/>
         </View>
       </Swiper>  
     );
   }
 }
 
-var Fullwidth = Dimensions.get('window').width;
-var Fullheight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
     wrapper: {
@@ -76,6 +67,7 @@ const styles = StyleSheet.create({
     slide2: {
       flex: 1,
       backgroundColor: '#3fa2d3',
-      //alignItems: 'center',
+      bottom: 20,
+      height: Dimensions.get('screen').height,
     }
 })

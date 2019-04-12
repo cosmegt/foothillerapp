@@ -1,16 +1,18 @@
 import React from 'react';
 import { View, Text, Alert, Dimensions } from 'react-native';
+import { Gradient } from "../../../assets/gradient";
 //import { CheckBox, ListItem, Body, Container, Header, Content } from 'native-base';
-import { CheckBox, Button } from 'react-native-elements';
+import { CheckBox, Button, Header } from 'react-native-elements';
+import { createAppContainer, createStackNavigator } from 'react-navigation'
 
 
-export default class PlannerScreen extends React.Component {
+class PlannerScreen extends React.Component {
 
   render() {
-    let deviceHeight = Dimensions.get('screen').height / 5
+    let deviceHeight = Dimensions.get('screen').height / 3
     let deviceWidth = Dimensions.get('screen').width / 2
     return (
-      <View>
+      <View style={styles.Slide}>
         <Text style={styles.Title}>{"\n"}Planner</Text>
         <Button
           title="Add Event"
@@ -24,7 +26,7 @@ export default class PlannerScreen extends React.Component {
             left: ((Dimensions.get('window').width/2)-((Dimensions.get('window').width-deviceWidth)/2))-10,
           }}
           onPress={() =>
-            Alert.alert("Hello")
+            this.props.navigation.navigate('Event')
           }
         />
       </View>
@@ -37,21 +39,37 @@ class EventScreen extends React.Component {
   render(){
     return(
       <View>
-        <Text>Hello</Text>
+        <Text>This is a test</Text>
       </View>
     )
   }
 }
 
+const Nav = createStackNavigator({
+  Plan: PlannerScreen,
+  Event: EventScreen
+});
+
+const NavCon = createAppContainer(Nav);
+
+export default class PlanScreen extends React.Component {
+  render(){
+    return <NavCon />
+  }
+}
+
+
 const styles ={
+  Slide: {
+    backgroundColor: '#3fa2d3',
+    flex: 1
+  },
   Title: {
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold',
-    //borderBottomWidth: 3,
     borderBottomColor: '#FFF',
     textAlign: 'center',
-    flex: -1
   },
   Checkbox: {
     justifyContent: 'flex-start',
@@ -62,9 +80,6 @@ const styles ={
     alignItems: 'center',
     fontSize: 25,
     color: '#fff',
-  },
-  Button: {
-
   }
 }
 
