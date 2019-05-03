@@ -6,7 +6,7 @@ import { CheckBox, Button, Header } from 'react-native-elements';
 import { createAppContainer, createStackNavigator } from 'react-navigation'
 
 
-export default class PlannerScreen extends React.Component {
+class PlannerScreen extends React.Component {
 
   render() {
     let deviceHeight = Dimensions.get('screen').height / 3
@@ -35,7 +35,28 @@ export default class PlannerScreen extends React.Component {
 }
 
 
+class EventScreen extends React.Component {
+  render(){
+    return(
+      <View>
+        <Text>This is a test</Text>
+      </View>
+    )
+  }
+}
 
+const Nav = createStackNavigator({
+  Plan: PlannerScreen,
+  Event: EventScreen
+});
+
+const NavCon = createAppContainer(Nav);
+
+export default class PlanScreen extends React.Component {
+  render(){
+    return <NavCon />
+  }
+}
 
 
 const styles ={
