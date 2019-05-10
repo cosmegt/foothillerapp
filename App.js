@@ -26,7 +26,7 @@ export default class App extends React.Component {
 
     return (
       <SafeAreaView style={styles.default}>
-        <LoginScreen />
+        <Content nameGoogle={"PARKER GEORGE"} emailGoogle={"326237@guhsd.net"} photoUrl={"https://lh6.googleusercontent.com/-hYvV05mcljw/AAAAAAAAAAI/AAAAAAAAAGY/OX9nJCkz89A/photo.jpg"}/>
       </SafeAreaView>
     );
   }

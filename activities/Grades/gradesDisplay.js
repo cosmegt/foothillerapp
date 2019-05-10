@@ -7,33 +7,11 @@ import Swiper from 'react-native-swiper';
 export default class GradesScreen extends React.Component {
   state = {
     password: "",
-    logedIn: "",
   }
-  
- 
 
- 
-  render() {
-    email = this.props.email
-    email = email.substring(0,6);
-    
-    return (
-      <LoginPage id={email}/>
-    );
+  handlePassword = (text) => {
+    this.setState({ password: text })
   }
-  
-}
-
-//This is to LogInForm
-const LoginPage = props => {
-  // Fetch Application
-  // ;
-  console.log("id: " + props.id)
-  
-  state = {
-    password: "",
-  }
-  
   login = (password) => {
     fetch("http://cozme.tech:69/grades.php", {
     method: "POST",
@@ -42,7 +20,6 @@ const LoginPage = props => {
     }),
     body: "username="+ email +"&password=" + password,
   })
-  
     .then((response) => response.text())
     .then((responseText) => {
           console.log(responseText);
@@ -50,24 +27,28 @@ const LoginPage = props => {
     .catch((error) => {
         console.log("reset client error-------",error);
     });
-  }
+ }
 
-  handlePassword = (text) => {
-    this.setState({ password: text })
-  }
+ 
+  render() {
+  // Fetch Application
+  var email = this.props.email;
+  email = email.substring(0,6);
+  
 
-  return (
-    <View>
+    return (
+      
+      <View>
         <View>
-          <Text style={styles.Title}>{"\n"}Grades</Text>
+          <Text style={styles.Title}>{"\n"}Grades Display</Text>
         </View>
         <View>
         <TextInput
           style={styles.input}
           placeholder="Password"
           onChangeText={(text) => {
-              // handlePassword(text);
-              console.log(text)
+              this.handlePassword(text);
+
             } 
           }
           secureTextEntry={true}
@@ -84,9 +65,10 @@ const LoginPage = props => {
         </TouchableOpacity>
       </View>
     </View>
-  )
+    );
+  }
+  
 }
-
 
 
 
@@ -105,5 +87,22 @@ const styles = {
   },
   subContent: {
     justifyContent: 'center',
-  }
+    alignContent: 'center',
+
+  },
+  input: {
+    margin: 15,
+    height: 40,
+    borderColor: '#FFFFFF',
+    borderWidth: 1
+ },
+ submitButton: {
+    backgroundColor: '#FFFFFF',
+    padding: 10,
+    margin: 15,
+    height: 40,
+ },
+ submitButtonText:{
+    color: 'black'
+ }
 }
