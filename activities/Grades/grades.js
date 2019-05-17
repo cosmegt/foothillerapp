@@ -45,7 +45,7 @@ const LoginPage = props => {
   
     .then((response) => response.text())
     .then((responseText) => {
-          console.log(responseText);
+          this.props.navigation.navigate('Display')
     })
     .catch((error) => {
         console.log("reset client error-------",error);
@@ -67,7 +67,7 @@ const LoginPage = props => {
           placeholder="Password"
           onChangeText={(text) => {
               // handlePassword(text);
-              console.log(text)
+              //console.log(text)
             } 
           }
           secureTextEntry={true}
@@ -78,7 +78,7 @@ const LoginPage = props => {
         <TouchableOpacity
                style = {styles.submitButton}
                onPress = {
-                  () => this.login(this.state.password)
+                  () => this.LoginPage(this.state.password)
                }>
                <Text style = {styles.submitButtonText}> Login to view Grades </Text>
         </TouchableOpacity>

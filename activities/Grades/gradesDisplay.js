@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
 
 
-export default class GradesScreen extends React.Component {
+export default class DisplayScreen extends React.Component {
   state = {
     password: "",
   }
