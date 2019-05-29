@@ -28,8 +28,8 @@ export default class Content extends React.Component {
           <HomeScreen/>
         </View>
         <View style={styles.slide}>
-          <Gradient colorize="rgba(0, 0, 0,0.5)"/>
           <GradesScreen/>
+          <Gradient colorize="rgba(0, 0, 0,0.5)"/>
         </View>
         <View style={styles.slide}>
           <Gradient colorize="rgba(0, 0, 0,0.5)"/>

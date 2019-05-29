@@ -6,7 +6,7 @@ import Swiper from 'react-native-swiper';
 export default class GradesDisplay extends React.Component {
   render() {
     return (
-      <View>
+      <View style={styles.Slide}>
         <View>
           <Text style={styles.Title}>{"\n"}Grades</Text>
         </View>
@@ -17,6 +17,10 @@ export default class GradesDisplay extends React.Component {
 
 
 const styles = {
+  Slide: {
+    backgroundColor: '#3fa2d3',
+    flex: 1
+  },
   Title: {
     color: '#fff',
     fontSize: 30,

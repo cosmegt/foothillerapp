@@ -1,16 +1,20 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-class signInInfinite extends React.Component {
+export default class signInInfinite extends React.Component {
   render() {
     return (
-      <View>
-          <Text>Grades</Text>
+      <View style={styles.Slide}>
+          <Text style={styles.Title}>Sign In Infinte Campus</Text>
       </View>
     );
   }
 }
 const styles = {
+    Slide: {
+    backgroundColor: '#3fa2d3',
+    flex: 1
+    },
     Title: {
       color: '#fff',
       fontSize: 30,
@@ -29,5 +33,3 @@ const styles = {
   
     }
   }
-
-export default signInInfinite;

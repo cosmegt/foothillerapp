@@ -9,12 +9,42 @@ import GradesDisplay from './grades.js'
 const Nav = createStackNavigator({
     signIn: signInInfinite,
     grades: GradesDisplay
+  },
+  {
+    initialRouteName: "signIn"
   });
 
   const NavCon = createAppContainer(Nav);
 
 export default class GradesScreen extends React.Component {
     render(){
-        return <NavCon />
-        }
+        return  (
+          <View style={styles.Slide}>
+            <NavCon/>
+          </View>
+        );
+    } 
+}
+const styles = {
+  Slide: {
+    backgroundColor: '#3fa2d3',
+    flex: 1
+  },
+  Title: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold',
+    borderBottomWidth: 3,
+    borderBottomColor: '#FFF',
+  },
+  todo: {
+    color: '#FFF',
+    fontSize: 22,
+
+  },
+  subContent: {
+    justifyContent: 'center',
+    alignContent: 'center',
+
+  }
 }
