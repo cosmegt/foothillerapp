@@ -1,16 +1,6 @@
 # FoothillerApp
 
-## Once Copied
-- Run npm install
-- To start do expo start (needs sudo)
+## Cosme's Branch
 
-
-## Installed Dependencies
-- NPM
-    - React Native Swipable -> `Remove fontFamily: 'Arial'`
-    - React Native Navigation 2.0
-Run `NPM install` if error shows up
-
-
-#Link
-
+This branch should be the new master thanks to parker working on it and breaking it
+...smh...parker...

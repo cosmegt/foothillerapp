@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 //import { createStackNavigator } from 'react-navigation';
 import Swiper from 'react-native-swiper';
 
-export default class GradesScreen extends React.Component {
+export default class GradesDisplay extends React.Component {
   render() {
     return (
       <View>

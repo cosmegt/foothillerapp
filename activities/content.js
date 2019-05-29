@@ -14,7 +14,7 @@ import {createStackNavigator, StackNavigator} from 'react-navigation'
 //Project Activities
 import HomeScreen from './Home/home';
 import ScheduleScreen from './Schedule/schedule';
-import GradesScreen from './Grades/grades';
+import GradesScreen from './Grades/gradesRouter';
 import CalendarScreen from './Calendar/calendar';
 import PlannerScreen from './Planner/plannerScreen/planner';
 import PlanScreen from '../activities/Planner/plannerRouter/planRouter';
