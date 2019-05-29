@@ -21,15 +21,6 @@ export default class CalendarScreen extends React.Component {
   }
 }
 
-
-
-
-
-
-
-
-
-
 const styles = {
   Title: {
     color: '#fff',
@@ -39,4 +30,9 @@ const styles = {
     borderBottomColor: '#FFF',
   },
 }
+
+
+
+
+
 
