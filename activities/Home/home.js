@@ -5,6 +5,28 @@ import Swiper from 'react-native-swiper';
 
 
 export default class HomeScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      //defauilt value of the date time
+      date: '',
+    };
+  }
+  componentDidMount() {
+    var that = this;
+    var date = new Date().getDate(); //Current Date
+    var month = new Date().getMonth() + 1; //Current Month
+    var year = new Date().getFullYear(); //Current Year
+    var hours = new Date().getHours(); //Current Hours
+    var min = new Date().getMinutes(); //Current Minutes
+    var sec = new Date().getSeconds(); //Current Seconds
+    that.setState({
+      //Setting the value of the date time
+      date:
+        date + '/' + month + '/' + year + ' ',
+    });
+  }
+  
   render() {
     // some comment
     return (
@@ -21,7 +43,8 @@ export default class HomeScreen extends React.Component {
                 height: 50,
                 }}>
             </Image>
-            <Text style={styles.text}>Today is a Regular Day</Text>
+            
+            <Text style={styles.text}>{this.state.date}Today is a Regular Day</Text>
           </View>
           <View style={styles.subContent}>
             <Text style={styles.text}>Your Next Class {"\n"}Math</Text>    
