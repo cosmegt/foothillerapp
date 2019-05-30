@@ -33,12 +33,12 @@ export default class GradesScreen extends React.Component {
     var gradesFinal = JSON.parse(gradeString);
     console.log('Fetched')
     this.setState({data : gradesFinal }, () => {
-      console.log(this.state.data["Am Govt 1C"]);
+      // console.log(this.state.data["Am Govt 1C"]);
     })
+  
+  
     
-
-    
-
+  
   })
   .catch((error) => {
       console.log("reset client error-------",error);
@@ -47,18 +47,27 @@ export default class GradesScreen extends React.Component {
   
   }
 
+  renderGrades = () => {
+    let Courses = Object.keys(this.state.data)
+    let i = 0, a=0, b=[];
+    for(i in Courses){
+      let Course = Courses[i];
+      console.log(Courses[i] + " : " + this.state.data[Course][0]);
+      b.push(<Text>{Courses[i] + " : " + this.state.data[Course][0]}</Text>);
+    }
+    return (
+      <Text style = {styles.grade}> {b.map(k => <Text>{k}</Text>)}</Text>
+    )
+  }
+
   render() {
     return (
       <View>
         <View>
           <Text style={styles.Title}>{"\n"}Grades:{"\n"}</Text>
           {this.state.data ? 
-            <Text style = {styles.grade}> 
-              Am Govt 1C:{"\n"}{this.state.data["Am Govt 1C"][0]}{"\n"}{this.state.data["Am Govt 1C"][1]}{"\n"}{"\n"}
-              Digital Arts 1:{"\n"}{this.state.data["Digital Arts 1"][0]}{"\n"}{this.state.data["Digital Arts 1"][1]}{"\n"}
-  
-            </Text> 
-          : null}
+            this.renderGrades()
+            : null}
         </View>
       </View>
     );
