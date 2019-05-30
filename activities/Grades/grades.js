@@ -53,7 +53,7 @@ export default class GradesScreen extends React.Component {
     for(i in Courses){
       let Course = Courses[i];
       console.log(Courses[i] + " : " + this.state.data[Course][0]);
-      b.push(<Text>{Courses[i] + " : " + this.state.data[Course][0]}</Text>);
+      b.push(<Text>{Courses[i] + " : " + this.state.data[Course][0] + "\n"}</Text>);
     }
     return (
       <Text style = {styles.grade}> {b.map(k => <Text>{k}</Text>)}</Text>
