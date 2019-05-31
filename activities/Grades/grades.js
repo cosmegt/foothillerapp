@@ -34,12 +34,11 @@ export default class GradesScreen extends React.Component {
     console.log('Fetched')
     this.setState({data : gradesFinal }, () => {
       // console.log(this.state.data["Am Govt 1C"]);
-      console.log(Object.keys(this.state.data)[0]);
     })
+  
+  
     
-
-    
-
+  
   })
   .catch((error) => {
       console.log("reset client error-------",error);
@@ -62,17 +61,27 @@ export default class GradesScreen extends React.Component {
     }
   }
 
+  renderGrades = () => {
+    let Courses = Object.keys(this.state.data)
+    let i = 0, a=0, b=[];
+    for(i in Courses){
+      let Course = Courses[i];
+      // console.log(Courses[i] + " : " + this.state.data[Course][0]);
+      b.push(<Text>{Courses[i] + " : " + this.state.data[Course][1] + "\n"}</Text>);
+    }
+    return (
+      <Text style = {styles.grade}> {b.map(k => <Text>{k}</Text>)}</Text>
+    )
+  }
+
   render() {
     return (
       <View>
         <View>
           <Text style={styles.Title}>{"\n"}Grades:{"\n"}</Text>
           {this.state.data ? 
-            <Text style = {styles.grade}> 
-            {this.renderGrades()}
-  
-            </Text> 
-          : null}
+            this.renderGrades()
+            : null}
         </View>
       </View>
     );
