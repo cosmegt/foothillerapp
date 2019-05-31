@@ -46,20 +46,6 @@ export default class GradesScreen extends React.Component {
   //end of fetch 
   
   }
-  renderGrades = () => {
-    let gradesRender = [];
-    let gradesData = this.state.data;
-    let i = 0;
-    for(i in Object.keys(gradesData)){
-      let Subject = Object.keys(this.state.data)[i];
-      let a = 0;
-      for(a in this.state.data[Subject]){
-        console.log(Subject + " : " + this.state.data[Subject][a])
-        // gradesRender.push(<Text>{Object.keys(this.state.data)[i] + " : " }</Text>)
-      }
-      
-    }
-  }
 
   renderGrades = () => {
     let Courses = Object.keys(this.state.data)
